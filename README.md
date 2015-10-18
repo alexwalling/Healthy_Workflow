@@ -1,6 +1,5 @@
 # Healthy_Workflow
-Stay active and healthy while you're working on your computer
-
+Work smarter, !Harder.  Improve you health while you're working.
 
 ## Inspiration
 While we are all at these hackathon it can be easy to get so deep into your code that you forget about absolutely everything, including your health.  I wanted to change this and help not only hackers, but everyday computer users, to improve their health while working.
