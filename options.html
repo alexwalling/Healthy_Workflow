@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+
+  <title>Healthy Workflow options</title>
+  <style>
+    body: { padding: 10px; }
+  </style>
+</head>
+
+<body style="background-color:#e9be00">
+	<h1 class="text-center">Healthy Workflow</h1>
+
+	<div>
+		<h4 style="margin-top:0px; margin-bottom:0px;">How many pushups can you do?</h4>
+  		<select class="dropdown" style="margin-bottom:10px" id="pushup">
+   			<option value='1-5'>1-5</option>
+   			<option value='5-10'>5-10</option>
+   			<option value='10-20'>10-20</option>
+   			<option value='20+'>20+</option>
+  		</select>
+	</div>
+
+	<div>
+		<h4 style="margin-top:0px; margin-bottom:0px;">How many ab reps can you do?</h4>
+		<select class="dropdown" style="margin-bottom:10px" id="abs">
+			<option value='20'>20</option>
+			<option value='40'>40</option>
+			<option value='60'>60</option>
+			<option value='80'>80+</option>
+		</select>
+	</div>
+
+	<div>
+		<h4 style="margin-top:0px; margin-bottom:0px;">How many leg workout reps can you do?</h4>
+			<select class="dropdown" id="legs">	
+  				<option value='20'>20</option>
+				<option value='40'>40</option>
+				<option value='50'>60</option>
+				<option value='80+'>80+</option>
+			</select>
+	</div>
+
+	<div id="status"></div>
+  <button class="btn btn-default" style="margin-top:20px"id="save">Save</button>
+
+  <script src="options.js"></script>
+</body>
+</html>

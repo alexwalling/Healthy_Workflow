@@ -19,7 +19,8 @@ function myLoop () {           //  create a loop function
 		chrome.browserAction.setBadgeText({text: String(Math.round(i/60)) + 'm'});
 	}
 	i--;                    //  increment the counter
-    if (i == 0){
+    if (i == 55){
+
 		itemp = prompt('Time to workout:\nPlease open Healthy Workflow to generate a workout\nHow long until you want to take a workout break?(min)', '20');
 		i = parseInt(itemp) * 60;
 	}
