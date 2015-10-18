@@ -1,15 +1,29 @@
 //chrome.browserAction.setBadgeText({text: String(i)});
 
-var i = 1;                     //  set your counter to 1
+var i = 2*60;                     //  set your counter to 1
+var firstRun = true;
 
 function myLoop () {           //  create a loop function
    setTimeout(function () {    //  call a 3s setTimeout when the loop is called
-      chrome.browserAction.setBadgeText({text: String(i)});          //  your code here
-      i++;                     //  increment the counter
-      if (i == 3){
-	alert('hello');
+		if(firstRun){
+			var itemp = prompt('How long until you want to take a workout break?(min)', '20');
+			i = parseInt(itemp)*60;
+			firstRun = false;
+			chrome.browserAction.setBadgeBackgroundColor({
+    			color: [64, 64, 64, 255]
+			});
+		}
+		if(i <= 60){
+		chrome.browserAction.setBadgeText({text: String(i) + 's'});          //  your code here
+      } else {
+		chrome.browserAction.setBadgeText({text: String(Math.round(i/60)) + 'm'});
 	}
-      if (i < 10) {            //  if the counter < 10, call the loop function
+	i--;                    //  increment the counter
+    if (i == 0){
+		itemp = prompt('Time to workout:\nPlease open Healthy Workflow to generate a workout\nHow long until you want to take a workout break?(min)', '20');
+		i = parseInt(itemp) * 60;
+	}
+      if (i > 0) {            //  if the counter < 10, call the loop function
          myLoop();             //  ..  again which will trigger another
       }                        //  ..  setTimeout()
    }, 1000);

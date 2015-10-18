@@ -29,7 +29,6 @@ console.log(workout[0].name);
 document.addEventListener('DOMContentLoaded', function() {
   var checkPageButton = document.getElementById('checkPage');
   checkPageButton.addEventListener('click', function() {
-	console.log('hello2');
 	//document.getElementById('t1').innerHTML = 'NOTHEALTHY';
 	//alert('my name is alex');
 	var r = Math.floor(Math.random()*workout.length);

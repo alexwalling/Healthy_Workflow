@@ -1,6 +1,5 @@
 body{
    width:250px;
-   height:300px;
 	background-color:#e9be00;
 }
 
@@ -11,4 +10,8 @@ title{
 img{
   max-width: 100%;
   max-height: 100%;
+}
+
+a{
+	font-size:100%;
 }
