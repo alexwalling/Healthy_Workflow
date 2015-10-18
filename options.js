@@ -3,10 +3,13 @@ function save_options() {
   var pu = document.getElementById('pushup').value;
   var ab = document.getElementById('abs').value;
   var lw = document.getElementById('legs').value;
+  var wa = document.getElementById('water').checked;
+
   chrome.storage.sync.set({
     pushups: pu,
     abs: ab,
-	leg: lw
+	leg: lw,
+	water: wa
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
@@ -24,16 +27,14 @@ function restore_options() {
   chrome.storage.sync.get({
     pushups: '20+',
 	abs: '80+',
-	leg: '80+'
+	leg: '80+',
+	water: false
   }, function(items) {
     document.getElementById('pushup').value = items.pushups;
   	document.getElementById('abs').value = items.abs;
 	document.getElementById('legs').value = items.leg;
+	document.getElementById('water').checked = items.water;
 	});
 }
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
-
-
-var x = document.getElementById('time').elements[0].value;
-console.log(x);

@@ -14,12 +14,12 @@
   </style>
 </head>
 
-<body style="background-color:#e9be00">
+<body style="">
 	<h1 class="text-center">Healthy Workflow</h1>
 
-	<div>
-		<h4 style="margin-top:0px; margin-bottom:0px;">How many pushups can you do?</h4>
-  		<select class="dropdown" style="margin-bottom:10px" id="pushup">
+	<div style="margin-left:20px">
+		<h6 style="margin-top:0px; margin-bottom:0px;">How many pushups can you do?</h6>
+  		<select class="dropdown" style="margin-bottom:10px; margin-left:10px" id="pushup">
    			<option value='1-5'>1-5</option>
    			<option value='5-10'>5-10</option>
    			<option value='10-20'>10-20</option>
@@ -27,9 +27,9 @@
   		</select>
 	</div>
 
-	<div>
-		<h4 style="margin-top:0px; margin-bottom:0px;">How many ab reps can you do?</h4>
-		<select class="dropdown" style="margin-bottom:10px" id="abs">
+	<div style="margin-left:20px">
+		<h6 style="margin-top:0px; margin-bottom:0px;">How many ab reps can you do?</h6>
+		<select class="dropdown" style="margin-bottom:10px; margin-left:10px" id="abs">
 			<option value='20'>20</option>
 			<option value='40'>40</option>
 			<option value='60'>60</option>
@@ -37,9 +37,9 @@
 		</select>
 	</div>
 
-	<div>
-		<h4 style="margin-top:0px; margin-bottom:0px;">How many leg workout reps can you do?</h4>
-			<select class="dropdown" id="legs">	
+	<div style="margin-left:20px">
+		<h6 style="margin-top:0px; margin-bottom:0px;">How many leg workout reps can you do?</h6>
+			<select class="dropdown" style="margin-bottom:10px; margin-left:10px" id="legs">	
   				<option value='20'>20</option>
 				<option value='40'>40</option>
 				<option value='50'>60</option>
@@ -47,7 +47,12 @@
 			</select>
 	</div>
 
-	<div id="status"></div>
+	<label style="margin-left:20px">
+		Drink water reminder 
+  		<input type="checkbox" style="margin-left:10px" id="water">
+	</label>
+
+	<h6 id="status"></h6>
   <button class="btn btn-default" style="margin-top:20px"id="save">Save</button>
 
   <script src="options.js"></script>

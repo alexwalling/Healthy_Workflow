@@ -2,6 +2,8 @@
 
 var i = 2*60;                     //  set your counter to 1
 var firstRun = true;
+var water;
+chrome.storage.sync.get({water: true}, function(items) {water = items.water;});
 
 function myLoop () {           //  create a loop function
    setTimeout(function () {    //  call a 3s setTimeout when the loop is called
@@ -13,6 +15,7 @@ function myLoop () {           //  create a loop function
     			color: [64, 64, 64, 255]
 			});
 		}
+		
 		if(i <= 60){
 		chrome.browserAction.setBadgeText({text: String(i) + 's'});          //  your code here
       } else {
